@@ -1,4 +1,858 @@
-<!doctype html><html lang="no"><head><meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow"><meta http-equiv="refresh" content="0; url=https://veldigrent.arcads.no/portal/">
-<title>Veldig Rent & Raskflytting x Arcads</title></head>
-<body><p><a href="https://veldigrent.arcads.no/portal/">Gå til kundeportalen</a></p><script>location.replace("https://veldigrent.arcads.no/portal/")</script></body></html>
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- kundesubdomene: alltid noindex -->
+<title>Flyttebyrå i Oslo — skriftlig fastpris før flyttedagen · Rask Flytting</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"><!-- Rask Flyttings eget logomerke (raskflytting.no/favicon.ico), 64px -->
+<!-- ============================================================
+     RASK FLYTTING — Frøyd-clone structure (samme mal som Veldigrent/Badstugutta/UR), blå/rød palett fra logoen
+     Kunde-LP på raskflytting.arcads.no (laget 04.10.2026). Søsterselskap av Veldigrent (GB-gruppen).
+
+     Fakta-kilder (hentet 04.10.2026 fra raskflytting.no, /tjenester/privatflytting, /kontakt):
+       · Rask Flytting AS, del av GB Transport AS, org.nr 835 095 002 · Tlf 22 44 84 40
+       · kundeservice@raskflytting.no · man–fre 09–16, lørdag kun e-post, søndag stengt
+       · Flyttebyrå siden 2014, faste lønnede ansatte (ingen innleide vikarer), uniform m/ ID-kort
+       · Skriftlig/bindende fastpris før flyttedagen, ingen kveldstillegg
+       · Ansvarsforsikring opp til 1 mill. kr gjennom Tryg · fornøyd-garanti
+       · Veiledende priser: hybel/1-rom fra 3 900 · 2-rom fra 5 900 · 3-rom fra 7 900
+         · 4-rom/rekkehus fra 11 900 · enebolig etter befaring
+       · Inkludert: bil, drivstoff, bompenger, bæreutstyr, forsikring (ordrett fra FAQ)
+       · Anmeldelsene er ordrett fra Google-widgeten på raskflytting.no
+       · Bilder i img/ er kopiert fra raskflytting.no/assets (hashede filnavn der endres ved hvert bygg)
+
+     ÅPENT: WEBHOOK_URL/THANK_YOU_URL er tomme — leadflyt (Make → kunden) må kobles før trafikk.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ===== Rask Flytting palette (blå fra logo/uniform + rød bue-aksent) ===== */
+  --cream:#F5F7FB; --sand:#FAFBFE; --white:#fff;
+  --ink:#141E36; --ink2:#1F2B48; --muted:#55617A; --line:#DEE4EF;
+  --clay:#1C47A6; --clay-deep:#12327D; --clay-soft:#1C47A6; --clay-tint:#EAF0FB;
+  --gold-acc:#F0574D; --gold-deep:#D63A31;
+  --black:#12327D; --red:#C0584A; --gold:#E8A70F;
+  --mont:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --r:18px; --rs:14px; --pill:999px;
+  --sh:0 24px 54px -32px rgba(18,50,125,.42);
+  --sh-sm:0 14px 30px -22px rgba(18,50,125,.32);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:var(--mont);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spacing:-0.01em;overflow-wrap:break-word}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:64px 0}
+@media(max-width:760px){.section{padding:44px 0}}
+.eyebrow{display:inline-block;font-size:0.78rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep)}
+.eyebrow.muted{color:var(--muted)}
+.h-xl{font-size:clamp(1.95rem,4.4vw,3.0rem)}
+.h-lg{font-size:clamp(1.6rem,3.1vw,2.3rem)}
+.lede{font-size:1.04rem;color:var(--muted);max-width:56ch}
+.center{text-align:center}
+
+/* ---- buttons (Frøyd pill: navy, hvit bold + sirkulær pil, subtekst) ---- */
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--clay);color:#fff;border:0;cursor:pointer;border-radius:var(--pill);padding:16px 40px;line-height:1.15;transition:.2s;box-shadow:0 16px 30px -18px rgba(18,50,125,.5)}
+.cta:hover{background:var(--clay-deep);transform:translateY(-2px)}
+.cta .t{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+.cta .t .arw{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center}
+.cta .t .arw svg{width:13px;height:13px}
+.cta .sub{font-size:0.74rem;font-weight:500;opacity:.85}
+.cta.lg{padding:18px 48px}
+.cta.lg .t{font-size:1.14rem}
+.btn-soft{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:var(--pill);padding:13px 24px;font-weight:600;font-size:0.92rem;cursor:pointer;transition:.2s}
+.btn-soft:hover{border-color:var(--clay);color:var(--clay-deep)}
+.btn-soft svg{width:16px;height:16px}
+
+/* ---- top bar (wordmark + rating) ---- */
+.topbar{background:var(--cream);text-align:center;padding:14px 16px 10px}
+.topbar .wordmark{display:inline-block;font-size:1.5rem;letter-spacing:.06em;color:var(--clay);line-height:1;margin-bottom:9px}
+.topbar .wordmark b{font-weight:800}
+.topbar .wordmark span{font-weight:300}
+.topbar .rate{display:flex;align-items:center;justify-content:center;gap:7px;font-size:0.92rem;font-weight:600;color:var(--ink)}
+.topbar .stars{color:var(--gold);letter-spacing:1px;font-size:0.98rem}
+.topbar .rate small{color:var(--muted);font-weight:500}
+.topbar .rate{flex-wrap:wrap;column-gap:5px;row-gap:0;max-width:92vw;margin:0 auto}
+.offer .tile .big.sm{font-size:1.9rem;white-space:nowrap}
+@media(max-width:480px){.offer .tile .big.sm{font-size:1.4rem}}
+/* ---- campaign strip ---- */
+.strip{background:var(--black);color:#fff;text-align:center;padding:13px 16px;font-size:1.02rem;font-weight:700;letter-spacing:.02em}
+@media(max-width:600px){.strip{font-size:0.9rem}}
+/* ---- hero ---- */
+.hero{position:relative;padding:34px 0 56px;background:url('img/hero.webp') 70% 40%/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,50,125,.95) 0%,rgba(18,50,125,.90) 34%,rgba(18,50,125,.66) 60%,rgba(18,50,125,.38) 82%,rgba(18,50,125,.24) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{color:#fff;text-shadow:0 2px 16px rgba(18,50,125,.5)}
+.hero .chk{background:var(--gold-acc)}
+.hero .offer-note{color:#fff;text-shadow:0 1px 8px rgba(18,50,125,.5)}
+.hero .offer-note span{color:rgba(255,255,255,.85)}
+.hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;gap:40px;align-items:start}
+.hero h1{margin:4px 0 18px}
+.hero .blist{list-style:none;display:grid;gap:11px;margin:0 0 22px}
+.hero .blist li{display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:#fff;text-shadow:0 1px 10px rgba(18,50,125,.6)}
+.chk{width:22px;height:22px;border-radius:50%;background:var(--clay-soft);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.chk svg{width:12px;height:12px;stroke:#fff}
+
+/* ---- offer visual (flyttevask + 15 % = tilbudet) ---- */
+.offer{display:flex;align-items:stretch;gap:12px;max-width:440px}
+.offer .tile{position:relative;flex:1;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 12px 13px;text-align:center;box-shadow:var(--sh-sm)}
+.offer .tile img{height:104px;width:100%;object-fit:cover;border-radius:10px;margin:0 auto 9px}
+.offer .tile .big{display:flex;align-items:center;justify-content:center;height:104px;margin:0 auto 9px;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;color:var(--clay)}
+.offer .tile b{display:block;font-size:0.9rem;font-weight:700;line-height:1.25}
+.offer .tile .pr{display:block;font-size:0.8rem;color:var(--muted);margin-top:2px}
+.offer .plus{align-self:center;width:34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-sm)}
+.offer .freebadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--pill);padding:4px 12px;white-space:nowrap}
+.offer-note{font-size:0.84rem;font-weight:600;color:var(--gold-deep);margin-top:12px}
+.offer-note span{color:var(--muted);font-weight:500}
+@media(max-width:480px){.offer{gap:9px}.offer .tile img,.offer .tile .big{height:84px}.offer .tile .big{font-size:2rem}.offer .plus{width:28px;height:28px;font-size:1.05rem}}
+
+/* ---- personcard ---- */
+.personcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:38px 30px 32px;text-align:center;box-shadow:var(--sh)}
+.s-media .personcard img,.personcard img{width:210px;height:210px;min-height:0;max-height:none;border-radius:50%;object-fit:cover;object-position:center 20%;margin:0 auto 18px;box-shadow:none}
+.personcard b{display:block;font-size:1.3rem;font-weight:800;letter-spacing:-0.01em}
+.personcard .role{display:block;font-size:0.88rem;font-weight:600;color:var(--gold-deep);margin-top:3px}
+.personcard p{font-size:1rem;color:var(--muted);margin-top:14px;max-width:34ch;margin-left:auto;margin-right:auto}
+@media(max-width:480px){.s-media .personcard img,.personcard img{width:170px;height:170px}}
+
+/* hero form card */
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px;box-shadow:var(--sh)}
+.formcard .fhead b{display:block;font-size:1.14rem;font-weight:800;letter-spacing:-0.01em}
+.formcard .fhead span{display:block;font-size:0.84rem;color:var(--muted);margin:5px 0 12px}
+.field{margin-bottom:10px}
+.field label{display:block;font-size:0.78rem;font-weight:700;margin-bottom:4px}
+.field label .req{color:var(--clay)}
+.field .inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);overflow:hidden}
+.field .inp:focus-within{border-color:var(--clay);background:#fff}
+.field .flag{padding:0 10px;font-size:1.05rem;border-right:1px solid var(--line);align-self:stretch;display:flex;align-items:center}
+.field input{flex:1;width:100%;padding:10px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink)}
+.field input:focus{outline:none}
+.field textarea{flex:1;width:100%;padding:9px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink);resize:vertical;min-height:46px;line-height:1.45}
+.field textarea:focus{outline:none}
+.formcard .cta{width:100%;margin-top:4px;padding:13px 32px}
+.fmsg{display:none;background:var(--clay-tint);border:1px solid var(--clay-soft);color:var(--clay-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
+.fmsg a{text-decoration:underline;font-weight:700}
+.formcard .fine{display:flex;flex-direction:column;gap:3px;font-size:0.74rem;color:var(--muted);margin-top:10px;text-align:center}
+.formcard .fine b{color:var(--ink2);font-weight:700}
+/* ---- multi-steg skjema (4 steg, steg 1 speiler raskflytting.no) ---- */
+.fstep{display:none}
+.fstep.on{display:block}
+.fgrid2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+@media(max-width:380px){.fgrid2{grid-template-columns:1fr}}
+.field select{flex:1;width:100%;padding:10px 36px 10px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink);appearance:none;-webkit-appearance:none;cursor:pointer}
+.field select:focus{outline:none}
+.field select:invalid{color:var(--muted)}
+.field .inp.sel{position:relative}
+.field .inp.sel::after{content:'';position:absolute;right:14px;top:50%;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.fsteps{display:flex;align-items:center;gap:6px;margin:2px 0 12px}
+.fsteps b{height:5px;flex:1;border-radius:3px;background:var(--line);transition:.25s}
+.fsteps b.on{background:var(--clay)}
+.fsteps span{font-size:0.72rem;font-weight:700;color:var(--muted);white-space:nowrap;margin-left:4px}
+.cbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.cbox{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;background:var(--sand);padding:9px 10px;font-size:0.82rem;font-weight:600;cursor:pointer;transition:.15s;line-height:1.3}
+.cbox:has(input:checked){border-color:var(--clay);background:var(--clay-tint);color:var(--clay-deep)}
+.cbox input{accent-color:var(--clay);width:15px;height:15px;flex:none;margin:0}
+.fnav{display:flex;justify-content:space-between;align-items:stretch;gap:10px;margin-top:12px}
+.fnav .btn-soft{padding:11px 20px;justify-content:center}
+.fnav .cta{flex:1;padding:12px 28px}
+.gdpr{display:flex;align-items:flex-start;gap:9px;font-size:0.78rem;color:var(--muted);margin-top:10px;cursor:pointer;text-align:left}
+.gdpr input{accent-color:var(--clay);margin-top:2px;flex:none}
+@media(max-width:900px){
+  .hero{padding:26px 0 46px}
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero-copy{order:1}.hero-form{order:2}
+}
+@media(max-width:480px){
+  .h-xl{font-size:1.75rem}
+  .strip{font-size:0.82rem}
+  .pricebar .now{font-size:1.28rem}
+}
+
+/* ---- split (image + text) ---- */
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center}
+.split.rev .s-media{order:2}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:30px}.split.rev .s-media{order:0}}
+.s-media{position:relative}
+.s-media img{width:100%;height:100%;min-height:340px;max-height:460px;object-fit:cover;border-radius:var(--r);box-shadow:var(--sh)}
+/* carousel */
+.caro{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.caro .track{display:flex;transition:transform .5s cubic-bezier(.4,.1,.2,1)}
+.caro .track img{min-width:100%;height:430px;object-fit:cover;border-radius:0}
+.caro .ar{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-sm);z-index:2}
+.caro .ar.l{left:14px}.caro .ar.r{right:14px}
+.caro .ar svg{width:16px;height:16px;stroke:var(--ink)}
+.caro .dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:7px;z-index:2}
+.caro .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
+.caro .dots b.on{background:#fff;width:20px;border-radius:5px}
+.feat{list-style:none;display:grid;gap:22px}
+.feat li{display:flex;gap:14px;align-items:flex-start}
+.feat .chk{margin-top:2px}
+.feat h4{font-size:1.12rem;font-weight:700;margin-bottom:3px}
+.feat p{font-size:0.98rem;color:var(--muted)}
+
+/* ---- pain points (rød X) ---- */
+.pain{display:grid;gap:14px;max-width:680px;margin:40px auto 0}
+.pain .row{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:16px 20px;font-weight:600;font-size:1.02rem;box-shadow:var(--sh-sm);text-align:left}
+.pain .x{color:var(--red);font-size:1.2rem;font-weight:800;flex:none}
+
+/* ---- dark CTA band ---- */
+.darkband{background:var(--clay);color:#fff;border-radius:var(--r);padding:48px 40px;text-align:center;box-shadow:var(--sh)}
+.darkband .eyebrow{color:var(--gold-acc)}
+.darkband h2{color:#fff;max-width:26ch;margin:14px auto 12px}
+.darkband p{color:rgba(255,255,255,.85);max-width:52ch;margin:0 auto;font-size:1.04rem}
+.darkband .codebox{margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;background:rgba(240,87,77,.14);border:1px dashed var(--gold-acc);border-radius:13px;padding:11px 20px}
+.darkband .codebox b{font-size:1.06rem;letter-spacing:.04em;color:#fff}
+.darkband .codebox .hl{color:var(--gold-acc);font-weight:700}
+.darkband .cta{margin-top:26px;background:#fff;color:var(--clay)}
+.darkband .cta:hover{background:var(--clay-tint)}
+.darkband .cta .arw{background:rgba(28,71,166,.14)}
+.darkband .cta .arw svg{stroke:var(--clay)}
+.darkband .micro{font-size:0.8rem;color:rgba(255,255,255,.6);margin-top:14px}
+@media(max-width:620px){.darkband{padding:42px 24px}}
+
+/* ---- included card ---- */
+.inc-card{background:var(--white);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:0;overflow:hidden;box-shadow:var(--sh)}
+.inc-card .body{padding:42px 40px}
+.inc-card .pic img{width:100%;height:100%;min-height:440px;object-fit:cover}
+.inc-list{list-style:none;display:grid;gap:12px;margin:22px 0 26px}
+.inc-list li{display:flex;gap:13px;align-items:flex-start;font-size:1rem}
+.inc-list .chk{margin-top:1px}
+.pricebar{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.pricebar .ord{font-size:0.94rem;color:var(--muted)}
+.pricebar .now{font-size:1.55rem;font-weight:800;color:var(--clay);letter-spacing:-0.02em}
+.pricebar .now small{font-size:0.86rem;font-weight:600;color:var(--muted);letter-spacing:0}
+@media(max-width:880px){.inc-card{grid-template-columns:1fr}.inc-card .pic{order:-1}.inc-card .pic img{min-height:280px}.inc-card .body{padding:34px 26px}}
+
+/* ---- reviews ---- */
+.rev-head{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;flex-direction:column}
+.rev-score{display:inline-flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--pill);padding:10px 20px;box-shadow:var(--sh-sm)}
+.rev-score .n{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em}
+.rev-score .stars{color:var(--gold);letter-spacing:1.5px}
+.rev-score small{color:var(--muted);font-weight:500}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+@media(max-width:880px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh-sm)}
+.rev-card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.rev-card .stars{color:var(--gold);letter-spacing:1.5px;font-size:0.96rem}
+.rev-card .g{font-size:0.72rem;font-weight:700;color:var(--muted);display:inline-flex;align-items:center;gap:5px}
+.rev-card p{font-size:0.98rem;color:var(--ink2);line-height:1.6}
+.rev-by{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}
+.rev-by b{font-weight:700;font-size:0.95rem;display:block}
+.rev-by span{font-size:0.74rem;color:var(--muted)}
+
+/* ---- faq ---- */
+.faq{display:grid;gap:11px;max-width:840px;margin:42px auto 0}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:4px 22px;transition:.2s}
+.faq details[open]{box-shadow:var(--sh-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:1.06rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:28px;height:28px;border-radius:50%;background:var(--clay-tint);color:var(--clay-deep);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none;transition:.3s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--clay);color:#fff}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:0.98rem;max-width:72ch}
+
+/* ---- Oslo-kort ---- */
+.locard{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);background:var(--white)}
+.locard .head{background:radial-gradient(120% 120% at 72% 18%,#2556C4,#12327D);padding:46px 30px;text-align:center}
+.locard .pin{display:inline-flex;width:64px;height:64px;border-radius:50%;background:rgba(240,87,77,.18);align-items:center;justify-content:center}
+.locard .pin svg{width:30px;height:30px;stroke:var(--gold-acc)}
+.locard .nm{font-weight:800;font-size:1.28rem;color:#fff;margin-top:15px}
+.locard .ad{color:rgba(255,255,255,.8);font-size:0.95rem;margin-top:6px}
+.locard .ad small{display:block;color:rgba(255,255,255,.55);font-size:0.8rem;margin-top:3px}
+.locard .foot{padding:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+/* ---- footer ---- */
+.footer{background:var(--clay);color:rgba(255,255,255,.65);font-size:0.88rem;text-align:center;padding:48px 0 36px}
+.footer img{height:34px;margin:0 auto 14px;display:block}
+.footer .rate{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600}
+.footer .rate .stars{color:var(--gold);letter-spacing:1.5px}
+.footer .reg{margin-top:16px;font-size:0.8rem;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* ---- modal popup ---- */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(18,50,125,.55);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.3s}
+.modal-overlay.show{opacity:1;pointer-events:auto}
+.modal{background:var(--cream);border-radius:24px;max-width:520px;width:100%;overflow:auto;max-height:92vh;box-shadow:0 50px 100px -30px rgba(0,0,0,.55);transform:translateY(20px) scale(.97);transition:.35s cubic-bezier(.2,.7,.2,1)}
+.modal-overlay.show .modal{transform:none}
+.modal .mbody{padding:34px 32px;position:relative}
+.modal .mbody h3{font-size:1.7rem;margin:12px 0 8px}
+.modal .close{position:absolute;top:13px;right:15px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:0.95rem;color:var(--muted);transition:.2s}
+.modal .close:hover{background:var(--clay);color:#fff}
+@media(max-width:620px){.modal .mbody{padding:28px 22px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+<!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar" id="top">
+  <img src="img/logo.png" alt="Rask Flytting" style="height:46px;width:auto;margin:0 auto 8px">
+  <div class="rate">Flyttebyr&aring; siden 2014 <small>&middot; faste ansatte, ingen innleide vikarer</small></div>
+</div>
+
+<!-- ===== STRIP ===== -->
+<div class="strip">Skriftlig fastpris f&oslash;r flyttedagen &middot; forsikret opp til 1&nbsp;mill.&nbsp;kr &middot; forn&oslash;yd-garanti</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="h-xl">Flyttehjelp i Oslo med fast pris &mdash; skriftlig f&oslash;r flyttedagen</h1>
+        <ul class="blist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Bindende fastpris p&aring; e-post &mdash; ingen tillegg i etterkant</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Forsikret opp til 1&nbsp;million kroner under hele flyttingen</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Forn&oslash;yd-garanti &mdash; vi kommer tilbake til det er rettet opp</li>
+        </ul>
+        <div class="offer">
+          <div class="tile">
+            <img src="img/pakking.webp" alt="Rask Flytting pakker skj&oslash;re gjenstander">
+            <b>Komplett flytting</b>
+            <span class="pr">b&aelig;ring, bil, demontering og montering</span>
+          </div>
+          <div class="plus">+</div>
+          <div class="tile">
+            <span class="freebadge">Fast pris</span>
+            <span class="big sm">fra 3&nbsp;900</span>
+            <b>kr inkl. mva</b>
+            <span class="pr">hybel / 1-roms i Oslo</span>
+          </div>
+        </div>
+        <p class="offer-note">Skriftlig pristilbud p&aring; e-post &mdash; <span>ofte samme dag</span></p>
+      </div>
+
+      <div class="hero-form">
+        <div class="formcard">
+          <div class="fhead">
+            <b>F&aring; fastpris p&aring; flyttingen &mdash; gratis</b>
+            <span>Du f&aring;r et n&oslash;yaktig pristilbud p&aring; e-post &mdash; helt uforpliktende.</span>
+          </div>
+          <div class="fmsg" id="formMsg">Takk! Vi har mottatt foresp&oslash;rselen &mdash; du f&aring;r et skriftlig fastpristilbud p&aring; e-post s&aring; raskt som mulig.</div>
+          <!-- Steg 1 speiler skjemaet p&aring; raskflytting.no (samme felt og nedtrekksvalg). Steg 2–4 samler inn det
+               raskflytting.no selv sier de trenger for &aring; prise: hva som flyttes, fra/til, etasje/heis. -->
+          <form id="leadForm" novalidate>
+            <div class="fsteps" id="fsteps"><b class="on"></b><b></b><b></b><b></b><span id="fstepTxt">Steg 1 av 4</span></div>
+
+            <!-- STEG 1: personlig -->
+            <div class="fstep on" data-step="1">
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="first_name">Fornavn <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="first_name" name="first_name" placeholder="Fornavn" required></div>
+                </div>
+                <div class="field">
+                  <label for="last_name">Etternavn <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="last_name" name="last_name" placeholder="Etternavn" required></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">E-post <span class="req">*</span></label>
+                <div class="inp"><input type="email" id="email" name="email" placeholder="E-postadresse" required></div>
+              </div>
+              <div class="field">
+                <label for="phone">Telefon <span class="req">*</span></label>
+                <div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required></div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="omrade">Omr&aring;de <span class="req">*</span></label>
+                  <div class="inp sel"><select id="omrade" name="omrade" required>
+                    <option value="" disabled selected>Velg omr&aring;de</option>
+                    <option>Oslo</option><option>Akershus</option><option>Buskerud</option><option>&Oslash;stfold</option><option>Indre &Oslash;stfold</option><option>Bergen</option><option>Trondheim</option><option>Stavanger</option><option>Kristiansand</option>
+                  </select></div>
+                </div>
+                <div class="field">
+                  <label for="tjeneste">Tjeneste <span class="req">*</span></label>
+                  <div class="inp sel"><select id="tjeneste" name="tjeneste" required>
+                    <option selected>Privatflytting</option><option>Bedriftsflytting</option><option>Pakkehjelp</option><option>Lagring</option><option>D&oslash;dsbo</option><option>Avfallsh&aring;ndtering</option><option>Flyttevask</option><option>Annet</option>
+                  </select></div>
+                </div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="onsket_dato">&Oslash;nsket dato <span class="req">*</span></label>
+                  <div class="inp"><input type="date" id="onsket_dato" name="onsket_dato" required></div>
+                </div>
+                <div class="field">
+                  <label for="onsket_tid">&Oslash;nsket tid <span class="req">*</span></label>
+                  <div class="inp sel"><select id="onsket_tid" name="onsket_tid" required>
+                    <option value="" disabled selected>Velg</option>
+                    <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option>
+                  </select></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEG 2: flytter fra -->
+            <div class="fstep" data-step="2">
+              <div class="field">
+                <label for="fra_adresse">Flytter fra (adresse) <span class="req">*</span></label>
+                <div class="inp"><input type="text" id="fra_adresse" name="fra_adresse" placeholder="Gate og nummer" required></div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="fra_postnr">Postnummer <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="fra_postnr" name="fra_postnr" inputmode="numeric" maxlength="4" placeholder="0000" required></div>
+                </div>
+                <div class="field">
+                  <label for="boligtype">Bolig <span class="req">*</span></label>
+                  <div class="inp sel"><select id="boligtype" name="boligtype" required>
+                    <option value="" disabled selected>Velg</option>
+                    <option>Hybel / 1-roms</option><option>2-roms</option><option>3-roms</option><option>4-roms / rekkehus</option><option>Enebolig</option><option>Kontor / lokale</option>
+                  </select></div>
+                </div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="fra_etasje">Etasje <span class="req">*</span></label>
+                  <div class="inp sel"><select id="fra_etasje" name="fra_etasje" required>
+                    <option value="" disabled selected>Velg</option>
+                    <option>Bakkeplan</option><option>1. etasje</option><option>2. etasje</option><option>3. etasje</option><option>4. etasje</option><option>5. etasje eller h&oslash;yere</option>
+                  </select></div>
+                </div>
+                <div class="field">
+                  <label for="fra_heis">Heis? <span class="req">*</span></label>
+                  <div class="inp sel"><select id="fra_heis" name="fra_heis" required>
+                    <option value="" disabled selected>Velg</option>
+                    <option>Ja</option><option>Nei</option>
+                  </select></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEG 3: flytter til + tillegg -->
+            <div class="fstep" data-step="3">
+              <div class="field">
+                <label for="til_adresse">Flytter til (adresse) <span class="req">*</span></label>
+                <div class="inp"><input type="text" id="til_adresse" name="til_adresse" placeholder="Gate og nummer, eller sted" required></div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="til_etasje">Etasje</label>
+                  <div class="inp sel"><select id="til_etasje" name="til_etasje">
+                    <option value="" selected>Velg</option>
+                    <option>Bakkeplan</option><option>1. etasje</option><option>2. etasje</option><option>3. etasje</option><option>4. etasje</option><option>5. etasje eller h&oslash;yere</option>
+                  </select></div>
+                </div>
+                <div class="field">
+                  <label for="til_heis">Heis?</label>
+                  <div class="inp sel"><select id="til_heis" name="til_heis">
+                    <option value="" selected>Velg</option>
+                    <option>Ja</option><option>Nei</option>
+                  </select></div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Trenger du ogs&aring;&hellip;</label>
+                <div class="cbox-grid">
+                  <label class="cbox"><input type="checkbox" name="tillegg" value="Pakkehjelp"> Pakkehjelp</label>
+                  <label class="cbox"><input type="checkbox" name="tillegg" value="Flyttevask"> Flyttevask</label>
+                  <label class="cbox"><input type="checkbox" name="tillegg" value="Lagring"> Lagring</label>
+                  <label class="cbox"><input type="checkbox" name="tillegg" value="Bortkj&oslash;ring av avfall"> Bortkj&oslash;ring av avfall</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEG 4: melding + samtykke -->
+            <div class="fstep" data-step="4">
+              <div class="field">
+                <label for="melding">Hva skal flyttes? <span style="font-weight:500;color:var(--muted)">(valgfritt)</span></label>
+                <div class="inp"><textarea id="melding" name="melding" rows="3" placeholder="F.eks. tunge m&oslash;bler, piano, antall esker, parkering ved oppgangen"></textarea></div>
+              </div>
+              <label class="gdpr"><input type="checkbox" name="gdpr" value="Ja"> Jeg vil motta e-post om tilbud og nyheter fra Rask Flytting. (Du kan melde deg av n&aring;r som helst)</label>
+            </div>
+
+            <input type="hidden" name="interest" value="Flytting — raskflytting.arcads.no">
+            <div class="fnav">
+              <button type="button" class="btn-soft" id="fPrev" style="display:none">Forrige</button>
+              <button type="button" class="cta" id="fNext"><span class="t">Neste<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
+              <button type="submit" class="cta" id="fSubmit" style="display:none"><span class="t">F&aring; fastpris<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></button>
+            </div>
+          </form>
+          <div class="fine">
+            <span>100&nbsp;% uforpliktende &mdash; vi deler aldri opplysningene dine.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HVORFOR OSS (karusell + features) ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split">
+      <div class="s-media reveal">
+        <div class="caro" id="caro">
+          <div class="track">
+            <img src="img/hero.webp" alt="Rask Flytting-team b&aelig;rer flyttekasser inn i bolig">
+            <img src="img/pakking.webp" alt="Pakkehjelp &mdash; Rask Flytting">
+            <img src="img/pakking-hjem.webp" alt="Rask Flytting pakker ned hjemmet">
+            <img src="img/lagring.webp" alt="Lagring &mdash; Rask Flytting">
+          </div>
+          <button class="ar l" aria-label="Forrige"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="ar r" aria-label="Neste"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Hvorfor velge Rask Flytting?</span>
+        <h2 class="h-lg" style="margin:12px 0 8px">Det som st&aring;r i e-posten, er det du betaler&hellip;</h2>
+        <p class="lede" style="margin-bottom:30px">&hellip;og det er faste folk med navnet p&aring; uniformen som b&aelig;rer tingene dine.</p>
+        <ul class="feat">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Bindende fastpris &mdash; skriftlig</h4><p>Du f&aring;r tilbudet p&aring; e-post f&oslash;r flyttedagen. G&aring;r det tregere enn planlagt, er det v&aring;r regning. Ingen kveldstillegg.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Forsikret opp til 1&nbsp;million kroner</h4><p>Ansvarsforsikring gjennom Tryg som dekker b&aring;de innbo og bygningsskader.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Faste ansatte &mdash; ingen innleide vikarer</h4><p>Erfarne, l&oslash;nnede flyttefolk i uniform med ID-kort, som har flyttet folk i Oslo-omr&aring;det siden 2014.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Forn&oslash;yd-garanti</h4><p>Er du ikke forn&oslash;yd, kommer vi tilbake til vi har rettet det opp &mdash; uten ekstra kostnad.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">Slipp flyttestresset</span>
+    <h2 class="h-lg" style="margin-top:12px">Flyttedagen, uten overraskelser&hellip;</h2>
+    <div class="pain">
+      <div class="row reveal"><span class="x">&#10005;</span> Ingen timepris som l&oslash;per l&oslash;psk n&aring;r sofaen ikke g&aring;r rundt svingen</div>
+      <div class="row reveal"><span class="x">&#10005;</span> Ingen ekstra lass midt p&aring; dagen fordi noen gjettet feil p&aring; volumet</div>
+      <div class="row reveal"><span class="x">&#10005;</span> Ingen innleide vikarer uten forsikring n&aring;r noe g&aring;r i stykker</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRISER (veiledende — ordrett fra raskflytting.no/tjenester/privatflytting) ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="darkband reveal">
+      <span class="eyebrow">&mdash; Veiledende priser &mdash;</span>
+      <h2 class="h-lg">Du vet hva flyttingen koster f&oslash;r f&oslash;rste eske l&oslash;ftes</h2>
+      <p>Hybel / 1-roms fra 3&nbsp;900&nbsp;kr &middot; 2-roms fra 5&nbsp;900&nbsp;kr &middot; 3-roms fra 7&nbsp;900&nbsp;kr &middot; 4-roms / rekkehus fra 11&nbsp;900&nbsp;kr. Enebolig: gratis befaring og bindende tilbud.</p>
+      <div class="codebox"><b>Alltid inkludert</b> <span class="hl">&rarr; bil, drivstoff, bompenger, b&aelig;reutstyr &middot; forsikring opp til 1&nbsp;mill.</span></div>
+      <div style="margin-top:26px"><a href="#top" class="cta lg jump"><span class="t">F&aring; fastpris p&aring; flyttingen<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a></div>
+      <p class="micro">Eksakt pris f&aring;r du etter en kort kartlegging &mdash; gjerne med noen bilder eller en kort video</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HVA F&Aring;R DU ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center" style="max-width:560px;margin:0 auto 32px">
+      <span class="eyebrow">Komplett privatflytting</span>
+      <h2 class="h-lg" style="margin-top:12px">Fra d&oslash;r til d&oslash;r &mdash; alt dette er med</h2>
+    </div>
+    <div class="inc-card reveal">
+      <div class="body">
+        <ul class="inc-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> B&aelig;ring fra leilighet eller enebolig til bil</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Demontering og montering av m&oslash;bler &mdash; senger, garderobeskap og IKEA-m&oslash;bler</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Profesjonelt teppe- og b&aelig;reutstyr som beskytter m&oslash;bler, vegger og d&oslash;rkarmer</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Transport med riktig dimensjonert flyttebil</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Plassering p&aring; riktig rom p&aring; ny adresse</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Parkeringstillatelse hos Bymilj&oslash;etaten &mdash; vi s&oslash;ker og setter opp skiltene</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> En prosjektleder med direktenummer fra tilbud til ferdig oppdrag</li>
+        </ul>
+        <div class="pricebar">
+          <span class="ord">Skriftlig fastpris f&oslash;r flyttedagen</span>
+          <span class="now">fra 3&nbsp;900&nbsp;kr <small>&middot; inkl. mva</small></span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:14px">Pakkehjelp, flyttevask, lagring og bortkj&oslash;ring av avfall kan legges til &mdash; egen fastpris p&aring; tilbudet, samme faktura.</p>
+      </div>
+      <div class="pic"><img src="img/hero.webp" alt="Flyttebil og flyttemann fra Rask Flytting" style="object-position:62% center"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIK FOREG&Aring;R DET ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:620px;margin:0 auto 10px">
+      <span class="eyebrow">Enkelt fra f&oslash;rste melding</span>
+      <h2 class="h-lg" style="margin-top:12px">Slik foreg&aring;r det</h2>
+      <p class="lede" style="margin:14px auto 0">Fortell oss hva som skal flyttes, fra hvor og til hvor &mdash; gjerne med noen bilder eller en kort video. Da f&aring;r du et skriftlig fastpristilbud p&aring; e-post, ofte samme dag.</p>
+    </div>
+    <div class="split rev" style="margin-top:34px">
+      <div class="s-media reveal">
+        <div class="personcard">
+          <img src="img/hero.webp" alt="Flyttemann fra Rask Flytting" style="object-position:60% 35%">
+          <b>Rask Flytting-teamet</b>
+          <span class="role">Faste, uniformerte flyttefolk &mdash; siden 2014</span>
+          <p>&laquo;Tilbudet skriver vi som bindende fastpris. Det som st&aring;r i e-posten, er det du betaler.&raquo;</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Trygt fra foresp&oslash;rsel til ny adresse</span>
+        <h2 class="h-lg" style="margin:12px 0 22px">Fire steg &mdash; s&aring; er du flyttet</h2>
+        <ul class="feat">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>1. Send foresp&oslash;rsel</h4><p>Skjemaet over eller telefon &mdash; du f&aring;r svar med fast pris.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>2. Befaring ved behov</h4><p>For st&oslash;rre flyttinger gj&oslash;r vi en gratis digital eller fysisk befaring.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>3. Selve flyttedagen</h4><p>Teamet kommer f&oslash;r avtalt tid, pakker, frakter og monterer &mdash; trygt og effektivt.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>4. Etter flyttingen</h4><p>Bestill flyttevask som tilfredsstiller utleier, eller bortkj&oslash;ring av avfall.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TJENESTER ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:640px;margin:0 auto">
+      <span class="eyebrow">Hvem passer det for?</span>
+      <h2 class="h-lg" style="margin:12px 0 10px">Alt du trenger til flyttingen &mdash; &eacute;n kontaktperson</h2>
+      <p class="lede" style="margin:0 auto 28px">Samme sj&aring;f&oslash;rer, samme faktura. Det passer perfekt om du:</p>
+    </div>
+    <ul class="feat reveal" style="max-width:560px;margin:0 auto;text-align:left">
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Flytter fra leilighet eller enebolig i Oslo og omegn</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Skal flytte kontoret med minimal nedetid</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Trenger hjelp med pakking, lagring mellom to boliger eller flyttevask</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Skal t&oslash;mme et d&oslash;dsbo &mdash; sk&aring;nsomt og diskret</h4></div></li>
+    </ul>
+    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#top" class="cta jump"><span class="t">F&aring; fastpris p&aring; flyttingen<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a></div>
+  </div>
+</section>
+
+<!-- ===== ANMELDELSER (ordrett fra Google-widgeten på raskflytting.no, hentet 04.10.2026) ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <span class="eyebrow muted">Anmeldelser</span>
+      <h2 class="h-lg center" style="margin:6px 0 16px">Dette sier kundene v&aring;re:</h2>
+      <div class="rev-score"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>Ekte anmeldelser fra Google</small></div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <div class="top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="g">Google-anmeldelse</span></div>
+        <p>&laquo;Veldig forn&oslash;yd med jobben de gjorde. Var litt stressa for b&aelig;ringen av en tung sofa og vaskemaskin opp trappene, men gutta som kom l&oslash;ste det overraskende greit. De var presise, effektive og passet godt p&aring; tingene underveis. Veldig greit at prisen ble akkurat som avtalt p&aring; forh&aring;nd, ingen overraskelser. Anbefales!&raquo;</p>
+        <div class="rev-by"><b>Jeremiah Onah</b><span>Google</span></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="g">Google-anmeldelse</span></div>
+        <p>&laquo;Enkelt &aring; bestille, de kom til avtalt tid og var meget forsiktige med alle tingene mine. De tok seg tid til &aring; flytte skj&oslash;re gjenstander p&aring; en trygg m&aring;te. Allikevel ble flyttingen effektivt utf&oslash;rt.&raquo;</p>
+        <div class="rev-by"><b>Hanne Dornish</b><span>Google</span></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="g">Google-anmeldelse</span></div>
+        <p>&laquo;Veldig forn&oslash;yd med Raskflytting. God kommunikasjon i forkant, kom til avtalt tid og gjorde jobben raskere enn forventet. De hjalp ogs&aring; til med montering uten problem. Kommer til &aring; bruke dem igjen!&raquo;</p>
+        <div class="rev-by"><b>Tsvetelina Aleksandrova</b><span>Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap center reveal">
+    <span class="eyebrow">Fast pris &middot; full forsikring &middot; forn&oslash;yd-garanti</span>
+    <h2 class="h-lg" style="margin:12px 0 24px">Klar for en flytting uten stress?</h2>
+    <a href="#top" class="cta lg jump"><span class="t">F&aring; fastpris p&aring; flyttingen<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center" style="max-width:560px;margin:0 auto">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-lg" style="margin-top:12px">Ofte stilte sp&oslash;rsm&aring;l</h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Hva koster en flytting i Oslo?<span class="pm">+</span></summary><div class="ans">Prisen avhenger av boligst&oslash;rrelse, avstand og eventuelle tilleggstjenester. Veiledende: hybel/1-roms fra 3&nbsp;900&nbsp;kr, 2-roms fra 5&nbsp;900&nbsp;kr, 3-roms fra 7&nbsp;900&nbsp;kr og 4-roms/rekkehus fra 11&nbsp;900&nbsp;kr. Enebolig prises etter gratis befaring. Du f&aring;r alltid en skriftlig fastpris f&oslash;r flyttedagen &mdash; tar oppdraget kortere tid enn estimert, betaler du mindre.</div></details>
+      <details><summary>Hva er inkludert i prisen?<span class="pm">+</span></summary><div class="ans">Bil, drivstoff, bompenger, b&aelig;reutstyr som traller og b&aelig;reseler, uniformerte ansatte, og ansvarsforsikring opp til 1&nbsp;million kroner gjennom Tryg. Pakkemateriell, lagring og flyttevask st&aring;r som separate poster p&aring; tilbudet, med sin egen fastpris.</div></details>
+      <details><summary>Er flyttingen forsikret?<span class="pm">+</span></summary><div class="ans">Ja. Alle privatflyttinger er forsikret med ansvarsforsikring opp til 1&nbsp;million kroner gjennom Tryg Forsikring. Skulle uhellet v&aelig;re ute, dekker forsikringen b&aring;de innbo og bygningsskader.</div></details>
+      <details><summary>Kan dere hjelpe med pakking og flyttevask?<span class="pm">+</span></summary><div class="ans">Ja &mdash; pakkehjelp, flyttevask, lagring og bortkj&oslash;ring av avfall kan bestilles fra oss. Det betyr &eacute;n faktura, &eacute;n kontaktperson og full kontroll p&aring; flyttedagen.</div></details>
+      <details><summary>Ordner dere parkeringstillatelse?<span class="pm">+</span></summary><div class="ans">Ja. Vi s&oslash;ker hos Bymilj&oslash;etaten tre virkedager f&oslash;r, dekker gebyret og setter opp skiltene selv n&aring;r vi kommer.</div></details>
+      <details><summary>Hvilke omr&aring;der dekker dere?<span class="pm">+</span></summary><div class="ans">Oslo og omegn &mdash; inkludert B&aelig;rum, Asker, Lillestr&oslash;m og Drammen &mdash; i tillegg til Bergen, Trondheim, Stavanger og Kristiansand. Vi tar ogs&aring; langflytting mellom byene.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="split" style="align-items:center">
+      <div class="reveal">
+        <span class="eyebrow">Oslo-basert flyttebyr&aring;</span>
+        <h2 class="h-lg" style="margin:12px 0 12px">Vi flytter i hele Oslo &mdash; og resten av landet</h2>
+        <p class="lede">Husstander, kontorer og d&oslash;dsbo siden 2014. Oslo og omegn, Bergen, Trondheim, Stavanger og Kristiansand &mdash; samt langflytting mellom byene.</p>
+        <p style="font-size:0.92rem;color:var(--muted);margin-top:12px">Sp&oslash;rsm&aring;l? Ring oss p&aring; <a href="tel:+4722448440" style="color:var(--clay-deep);font-weight:600">22 44 84 40</a> (man&ndash;fre 09&ndash;16) eller skriv til <a href="mailto:kundeservice@raskflytting.no" style="color:var(--clay-deep);font-weight:600">kundeservice@raskflytting.no</a></p>
+        <div style="margin-top:24px"><a href="#top" class="cta jump"><span class="t">F&aring; fastpris p&aring; flyttingen<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a></div>
+      </div>
+      <div class="locard reveal">
+        <div class="head">
+          <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div class="nm">Rask Flytting</div>
+          <div class="ad">Rask Flytting AS &middot; Oslo<small>Man&ndash;fre 09&ndash;16 &middot; l&oslash;rdag: e-post &middot; s&oslash;ndag stengt</small></div>
+        </div>
+        <div class="foot">
+          <a href="tel:+4722448440" class="btn-soft">Ring 22 44 84 40</a>
+          <a href="https://raskflytting.no" target="_blank" rel="noopener" class="btn-soft" style="background:var(--clay);color:#fff;border-color:var(--clay)">Bes&oslash;k raskflytting.no <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div style="display:inline-block;background:#fff;border-radius:14px;padding:10px 18px;margin-bottom:14px"><img src="img/logo.png" alt="Rask Flytting" style="height:34px;margin:0"></div>
+    <div class="reg">&copy; 2026 Rask Flytting AS &middot; del av GB Transport AS &middot; org.nr. 835 095 002<br>Oslo &middot; kundeservice@raskflytting.no &middot; 22 44 84 40<br>Fast pris &middot; Forsikret opp til 1&nbsp;mill.&nbsp;kr &middot; Forn&oslash;yd-garanti</div>
+  </div>
+</footer>
+
+<!-- ===== TIMED POPUP ===== -->
+<div class="modal-overlay" id="popup" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="F&aring; fastpris p&aring; flyttingen">
+    <div class="mbody">
+      <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
+      <div style="text-align:center">
+        <h3 style="font-size:2.15rem;line-height:1.03;margin:4px 0 4px">F&oslash;r du g&aring;r!</h3>
+        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px">F&aring; fastpris p&aring; flyttingen &mdash; gratis og uforpliktende</p>
+      </div>
+      <ul style="list-style:none;display:grid;gap:11px;margin:0 auto 22px;max-width:360px;text-align:left">
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Skriftlig fastpris p&aring; e-post &mdash; ofte samme dag</span></li>
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Forsikret opp til 1&nbsp;mill.&nbsp;kr &mdash; <b>forn&oslash;yd-garanti</b></span></li>
+      </ul>
+      <div style="text-align:center">
+        <button type="button" class="cta lg" id="popupGo" style="width:100%"><span class="t">G&aring; til skjemaet<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tar under ett minutt &mdash; helt uforpliktende</span></button>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px">Vi deler aldri opplysningene dine med noen andre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== CONFIG — PLASSHOLDER: koble webhook + takkeside før publisering ===== */
+var WEBHOOK_URL   ='';   /* PRIMÆR: Make-webhook — ikke koblet ennå (leadflyt til kunden må settes opp) */
+var BACKUP_ENDPOINT='';  /* BACKUP-webhook — settes ved lansering */
+var THANK_YOU_URL ='';   /* takkeside for konverterings-events — settes ved lansering */
+var LEAD_SOURCE   ='raskflytting-froyd-lp';
+
+/* ---- carousel ---- */
+(function(){
+  var c=document.getElementById('caro'); if(!c)return;
+  var track=c.querySelector('.track'), imgs=track.children, dotsWrap=c.querySelector('.dots'), i=0;
+  for(var k=0;k<imgs.length;k++){var b=document.createElement('b'); if(k===0)b.className='on'; dotsWrap.appendChild(b);}
+  var dots=dotsWrap.children;
+  function go(n){i=(n+imgs.length)%imgs.length; track.style.transform='translateX(-'+(i*100)+'%)'; for(var k=0;k<dots.length;k++)dots[k].className=(k===i?'on':'');}
+  c.querySelector('.ar.l').addEventListener('click',function(){go(i-1);});
+  c.querySelector('.ar.r').addEventListener('click',function(){go(i+1);});
+  var auto=setInterval(function(){go(i+1);},4500);
+  c.addEventListener('mouseenter',function(){clearInterval(auto);});
+})();
+
+/* ---- smooth scroll for in-page jumps ---- */
+function scrollToY(y,dur){var s=window.pageYOffset,d=y-s,t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/dur,1);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,s+d*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(!h||h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-10),500);});});
+
+/* ---- scroll reveal ---- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* ===== lead submit -> webhook (+ backup + on-device lagring) ===== */
+function postTo(url,obj){
+  if(!url)return;
+  var body=new URLSearchParams();
+  for(var k in obj){if(obj.hasOwnProperty(k)&&k.charAt(0)!=='_')body.append(k,obj[k]);}
+  try{if(navigator.sendBeacon&&navigator.sendBeacon(url,body))return;}catch(e){}
+  try{fetch(url,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()});}catch(e){}
+}
+function storeLead(obj){try{var a=JSON.parse(localStorage.getItem('rf_leads')||'[]');a.push(obj);localStorage.setItem('rf_leads',JSON.stringify(a.slice(-50)));}catch(e){}}
+function sendLead(payload){
+  payload._ts=Date.now();
+  postTo(WEBHOOK_URL,payload);
+  if(BACKUP_ENDPOINT){postTo(BACKUP_ENDPOINT,payload);payload._b=1;}
+  storeLead(payload);
+}
+function flushStoredLeads(){
+  if(!BACKUP_ENDPOINT)return;
+  try{var a=JSON.parse(localStorage.getItem('rf_leads')||'[]'),now=Date.now(),ch=false;
+  a.forEach(function(l){if(!l._b&&l._ts&&(now-l._ts)<6048e5){postTo(BACKUP_ENDPOINT,l);l._b=1;ch=true;}});
+  if(ch)localStorage.setItem('rf_leads',JSON.stringify(a));}catch(e){}
+}
+/* ---- multi-steg-navigasjon (4 steg) ---- */
+var leadForm=document.getElementById('leadForm');
+var steps=leadForm?leadForm.querySelectorAll('.fstep'):[];
+var curStep=1,maxStep=steps.length;
+function showStep(n){
+  curStep=Math.max(1,Math.min(maxStep,n));
+  for(var i=0;i<steps.length;i++)steps[i].classList.toggle('on',i===curStep-1);
+  var bars=document.querySelectorAll('#fsteps b');
+  for(var k=0;k<bars.length;k++)bars[k].classList.toggle('on',k<curStep);
+  var t=document.getElementById('fstepTxt');if(t)t.textContent='Steg '+curStep+' av '+maxStep;
+  document.getElementById('fPrev').style.display=curStep>1?'':'none';
+  document.getElementById('fNext').style.display=curStep<maxStep?'':'none';
+  document.getElementById('fSubmit').style.display=curStep===maxStep?'':'none';
+}
+function validStep(){
+  var fields=steps[curStep-1].querySelectorAll('input[required],select[required],textarea[required]');
+  for(var i=0;i<fields.length;i++){if(!fields[i].checkValidity()){fields[i].reportValidity();return false;}}
+  return true;
+}
+if(leadForm){
+  document.getElementById('fNext').addEventListener('click',function(){if(validStep())showStep(curStep+1);});
+  document.getElementById('fPrev').addEventListener('click',function(){showStep(curStep-1);});
+}
+function submitLead(form,msgEl){
+  if(!validStep())return;
+  var p={},fd=new FormData(form);
+  fd.forEach(function(v,k){if(v!=='')p[k]=p[k]?p[k]+', '+v:v;});
+  p.name=((p.first_name||'')+' '+(p.last_name||'')).trim();
+  p.subject='Nytt flytte-lead — raskflytting.arcads.no';
+  p.lead_source=LEAD_SOURCE;
+  p.page_url=location.href;
+  p.user_agent=navigator.userAgent;
+  sendLead(p);
+  try{sessionStorage.setItem('rf_lead_done','1');}catch(e){}
+  /* Konverterings-events (pixel/gtag) settes opp på takkesiden ved lansering — ikke her. */
+  if(msgEl)msgEl.style.display='block';
+  if(THANK_YOU_URL){setTimeout(function(){window.location.href=THANK_YOU_URL;},650);}
+  else{form.style.display='none';}
+}
+if(leadForm){leadForm.addEventListener('submit',function(e){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();submitLead(e.target,document.getElementById('formMsg'));});}
+flushStoredLeads();
+
+/* ---- timed popup (15s, én gang per økt) ---- */
+var overlay=document.getElementById('popup');
+if(overlay){
+  var popupSeen=function(){try{return sessionStorage.getItem('rf_popup_done')||sessionStorage.getItem('rf_lead_done');}catch(e){return false;}};
+  var openPopup=function(){if(popupSeen())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
+  var closePopup=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('rf_popup_done','1');}catch(e){}};
+  setTimeout(openPopup,15000);
+  var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
+  var pg=document.getElementById('popupGo');
+  if(pg)pg.addEventListener('click',function(){
+    closePopup();
+    var fc=document.querySelector('.formcard');
+    if(fc){scrollToY(Math.max(0,fc.getBoundingClientRect().top+window.pageYOffset-20),500);
+      var first=document.getElementById('first_name');if(first)setTimeout(function(){first.focus();},550);}
+  });
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
+}
+</script>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hva koster en flytting i Oslo?", "acceptedAnswer": {"@type": "Answer", "text": "Veiledende: hybel/1-roms fra 3 900 kr, 2-roms fra 5 900 kr, 3-roms fra 7 900 kr og 4-roms/rekkehus fra 11 900 kr. Enebolig prises etter gratis befaring. Du får alltid skriftlig fastpris før flyttedagen."}}, {"@type": "Question", "name": "Hva er inkludert i prisen?", "acceptedAnswer": {"@type": "Answer", "text": "Bil, drivstoff, bompenger, bæreutstyr som traller og bæreseler, uniformerte ansatte, og ansvarsforsikring opp til 1 million kroner gjennom Tryg. Pakkemateriell, lagring og flyttevask har egen fastpris."}}, {"@type": "Question", "name": "Er flyttingen forsikret?", "acceptedAnswer": {"@type": "Answer", "text": "Ja — ansvarsforsikring opp til 1 million kroner gjennom Tryg Forsikring, som dekker både innbo og bygningsskader."}}, {"@type": "Question", "name": "Ordner dere parkeringstillatelse?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Vi søker hos Bymiljøetaten tre virkedager før, dekker gebyret og setter opp skiltene."}}, {"@type": "Question", "name": "Hvilke områder dekker dere?", "acceptedAnswer": {"@type": "Answer", "text": "Oslo og omegn — inkludert Bærum, Asker, Lillestrøm og Drammen — samt Bergen, Trondheim, Stavanger og Kristiansand, og langflytting mellom byene."}}]}
+</script>
+</body>
+</html>
