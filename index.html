@@ -11,7 +11,7 @@
      Kunde-LP på raskflytting.arcads.no (laget 04.10.2026). Søsterselskap av Veldigrent (GB-gruppen).
 
      Fakta-kilder (hentet 04.10.2026 fra raskflytting.no, /tjenester/privatflytting, /kontakt):
-       · Rask Flytting AS, del av GB Transport AS, org.nr 835 095 002 · Tlf 22 44 84 40
+       · Rask Flytting AS, del av GB Transport AS, org.nr 835 095 002
        · kundeservice@raskflytting.no · man–fre 09–16, lørdag kun e-post, søndag stengt
        · Flyttebyrå siden 2014, faste lønnede ansatte (ingen innleide vikarer), uniform m/ ID-kort
        · Skriftlig/bindende fastpris før flyttedagen, ingen kveldstillegg
@@ -152,11 +152,19 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .fsteps{display:flex;align-items:center;gap:6px;margin:2px 0 12px}
 .fsteps b{height:5px;flex:1;border-radius:3px;background:var(--line);transition:.25s}
 .fsteps b.on{background:var(--clay)}
-.fsteps span{font-size:0.72rem;font-weight:700;color:var(--muted);white-space:nowrap;margin-left:4px}
+.fsteptxt{font-size:0.8rem;font-weight:700;color:var(--ink2);margin:-4px 0 12px}
+.fsteptxt b{color:var(--clay-deep)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fhint{font-size:0.74rem;color:var(--muted);margin-top:5px;line-height:1.4}
+.fsub{font-size:0.92rem;font-weight:800;margin:16px 0 8px;padding-top:12px;border-top:1px solid var(--line)}
+.rgrp{display:flex;flex-wrap:wrap;gap:7px}
+.rgrp .cbox{flex:1 1 auto;justify-content:center}
 .cbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .cbox{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;background:var(--sand);padding:9px 10px;font-size:0.82rem;font-weight:600;cursor:pointer;transition:.15s;line-height:1.3}
 .cbox:has(input:checked){border-color:var(--clay);background:var(--clay-tint);color:var(--clay-deep)}
 .cbox input{accent-color:var(--clay);width:15px;height:15px;flex:none;margin:0}
+.gdpr+.gdpr{margin-top:8px}
+.gdpr.err{color:var(--clay-deep)}
 .fnav{display:flex;justify-content:space-between;align-items:stretch;gap:10px;margin-top:12px}
 .fnav .btn-soft{padding:11px 20px;justify-content:center}
 .fnav .cta{flex:1;padding:12px 28px}
@@ -343,145 +351,223 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
             <span>Du f&aring;r et n&oslash;yaktig pristilbud p&aring; e-post &mdash; helt uforpliktende.</span>
           </div>
           <div class="fmsg" id="formMsg">Takk! Vi har mottatt foresp&oslash;rselen &mdash; du f&aring;r et skriftlig fastpristilbud p&aring; e-post s&aring; raskt som mulig.</div>
-          <!-- Steg 1 speiler skjemaet p&aring; raskflytting.no (samme felt og nedtrekksvalg). Steg 2–4 samler inn det
-               raskflytting.no selv sier de trenger for &aring; prise: hva som flyttes, fra/til, etasje/heis. -->
+          <!-- Skjemaet speiler raskflytting.no/tjenester/privatflytting felt for felt (alle 4 steg, sjekket 14.10.2026). -->
           <form id="leadForm" novalidate>
-            <div class="fsteps" id="fsteps"><b class="on"></b><b></b><b></b><b></b><span id="fstepTxt">Steg 1 av 4</span></div>
+            <div class="fsteps" id="fsteps"><b class="on"></b><b></b><b></b><b></b></div>
+            <div class="fsteptxt">Steg <span id="fstepN">1</span> av 4: <b id="fstepName">Personlig</b></div>
+            <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
 
-            <!-- STEG 1: personlig -->
-            <div class="fstep on" data-step="1">
+            <!-- STEG 1: Personlig (likt raskflytting.no) -->
+            <div class="fstep on" data-step="1" data-name="Personlig">
               <div class="fgrid2">
                 <div class="field">
                   <label for="first_name">Fornavn <span class="req">*</span></label>
-                  <div class="inp"><input type="text" id="first_name" name="first_name" placeholder="Fornavn" required></div>
+                  <div class="inp"><input type="text" id="first_name" name="first_name" placeholder="F.eks. Ola" autocomplete="given-name" required></div>
                 </div>
                 <div class="field">
                   <label for="last_name">Etternavn <span class="req">*</span></label>
-                  <div class="inp"><input type="text" id="last_name" name="last_name" placeholder="Etternavn" required></div>
+                  <div class="inp"><input type="text" id="last_name" name="last_name" placeholder="F.eks. Nordmann" autocomplete="family-name" required></div>
                 </div>
-              </div>
-              <div class="field">
-                <label for="email">E-post <span class="req">*</span></label>
-                <div class="inp"><input type="email" id="email" name="email" placeholder="E-postadresse" required></div>
-              </div>
-              <div class="field">
-                <label for="phone">Telefon <span class="req">*</span></label>
-                <div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required></div>
               </div>
               <div class="fgrid2">
                 <div class="field">
-                  <label for="omrade">Omr&aring;de <span class="req">*</span></label>
-                  <div class="inp sel"><select id="omrade" name="omrade" required>
+                  <label for="email">E-post <span class="req">*</span></label>
+                  <div class="inp"><input type="email" id="email" name="email" placeholder="navn@epost.no" autocomplete="email" required></div>
+                </div>
+                <div class="field">
+                  <label for="phone">Telefon <span class="req">*</span></label>
+                  <div class="inp"><input type="tel" id="phone" name="phone" placeholder="Ditt telefonnummer" autocomplete="tel" required></div>
+                </div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="region">Omr&aring;de <span class="req">*</span></label>
+                  <div class="inp sel"><select id="region" name="region" required>
                     <option value="" disabled selected>Velg omr&aring;de</option>
                     <option>Oslo</option><option>Akershus</option><option>Buskerud</option><option>&Oslash;stfold</option><option>Indre &Oslash;stfold</option><option>Bergen</option><option>Trondheim</option><option>Stavanger</option><option>Kristiansand</option>
                   </select></div>
                 </div>
                 <div class="field">
-                  <label for="tjeneste">Tjeneste <span class="req">*</span></label>
-                  <div class="inp sel"><select id="tjeneste" name="tjeneste" required>
+                  <label for="service_type">Tjeneste <span class="req">*</span></label>
+                  <div class="inp sel"><select id="service_type" name="service_type" required>
                     <option selected>Privatflytting</option><option>Bedriftsflytting</option><option>Pakkehjelp</option><option>Lagring</option><option>D&oslash;dsbo</option><option>Avfallsh&aring;ndtering</option><option>Flyttevask</option><option>Annet</option>
                   </select></div>
                 </div>
               </div>
               <div class="fgrid2">
                 <div class="field">
-                  <label for="onsket_dato">&Oslash;nsket dato <span class="req">*</span></label>
-                  <div class="inp"><input type="date" id="onsket_dato" name="onsket_dato" required></div>
+                  <label for="move_date">&Oslash;nsket dato <span class="req">*</span></label>
+                  <div class="inp"><input type="date" id="move_date" name="move_date" required></div>
                 </div>
                 <div class="field">
-                  <label for="onsket_tid">&Oslash;nsket tid <span class="req">*</span></label>
-                  <div class="inp sel"><select id="onsket_tid" name="onsket_tid" required>
-                    <option value="" disabled selected>Velg</option>
+                  <label for="move_time">&Oslash;nsket tid <span class="req">*</span></label>
+                  <div class="inp sel"><select id="move_time" name="move_time" required>
+                    <option value="" disabled selected>Velg klokkeslett</option>
                     <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option>
                   </select></div>
                 </div>
               </div>
             </div>
 
-            <!-- STEG 2: flytter fra -->
-            <div class="fstep" data-step="2">
+            <!-- STEG 2: Fra-adresse (likt raskflytting.no) -->
+            <div class="fstep" data-step="2" data-name="Fra-adresse">
               <div class="field">
-                <label for="fra_adresse">Flytter fra (adresse) <span class="req">*</span></label>
-                <div class="inp"><input type="text" id="fra_adresse" name="fra_adresse" placeholder="Gate og nummer" required></div>
+                <label for="from-address">Adresse <span class="req">*</span></label>
+                <div class="inp"><input type="text" id="from-address" name="from_address" placeholder="Gateadresse og husnummer" required></div>
               </div>
               <div class="fgrid2">
                 <div class="field">
-                  <label for="fra_postnr">Postnummer <span class="req">*</span></label>
-                  <div class="inp"><input type="text" id="fra_postnr" name="fra_postnr" inputmode="numeric" maxlength="4" placeholder="0000" required></div>
+                  <label for="from-postcode">Postnummer <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="from-postcode" name="from_postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="0150" required></div>
                 </div>
                 <div class="field">
-                  <label for="boligtype">Bolig <span class="req">*</span></label>
-                  <div class="inp sel"><select id="boligtype" name="boligtype" required>
-                    <option value="" disabled selected>Velg</option>
-                    <option>Hybel / 1-roms</option><option>2-roms</option><option>3-roms</option><option>4-roms / rekkehus</option><option>Enebolig</option><option>Kontor / lokale</option>
-                  </select></div>
+                  <label for="from-city">By/Sted <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="from-city" name="from_city" placeholder="Oslo" required></div>
                 </div>
               </div>
               <div class="fgrid2">
                 <div class="field">
-                  <label for="fra_etasje">Etasje <span class="req">*</span></label>
-                  <div class="inp sel"><select id="fra_etasje" name="fra_etasje" required>
-                    <option value="" disabled selected>Velg</option>
-                    <option>Bakkeplan</option><option>1. etasje</option><option>2. etasje</option><option>3. etasje</option><option>4. etasje</option><option>5. etasje eller h&oslash;yere</option>
-                  </select></div>
+                  <label for="from-m2">Hvor mange m&sup2;? <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="from-m2" name="from_m2" inputmode="numeric" placeholder="F.eks. 65" required></div>
                 </div>
                 <div class="field">
-                  <label for="fra_heis">Heis? <span class="req">*</span></label>
-                  <div class="inp sel"><select id="fra_heis" name="fra_heis" required>
-                    <option value="" disabled selected>Velg</option>
-                    <option>Ja</option><option>Nei</option>
+                  <label for="from-housing">Type bolig <span class="req">*</span></label>
+                  <div class="inp sel"><select id="from-housing" name="from_housing" required>
+                    <option value="" disabled selected>Velg boligtype</option>
+                    <option>Leilighet</option><option>Rekkehus</option><option>Enebolig</option><option>Hytte</option><option>Kontor</option>
                   </select></div>
                 </div>
               </div>
-            </div>
-
-            <!-- STEG 3: flytter til + tillegg -->
-            <div class="fstep" data-step="3">
               <div class="field">
-                <label for="til_adresse">Flytter til (adresse) <span class="req">*</span></label>
-                <div class="inp"><input type="text" id="til_adresse" name="til_adresse" placeholder="Gate og nummer, eller sted" required></div>
+                <label for="from-fits">Passer alt i 19 m&sup3; flyttebil? <span class="req">*</span></label>
+                <div class="inp sel"><select id="from-fits" name="from_fits" required>
+                  <option value="" disabled selected>Velg svar</option>
+                  <option>Ja</option><option>Nei</option><option>Vet ikke</option>
+                </select></div>
+                <p class="fhint">19 m&sup3; tilsvarer ca. en 2-roms leilighet. Usikker? Velg &laquo;Vet ikke&raquo; &ndash; vi finner riktig st&oslash;rrelse.</p>
               </div>
               <div class="fgrid2">
                 <div class="field">
-                  <label for="til_etasje">Etasje</label>
-                  <div class="inp sel"><select id="til_etasje" name="til_etasje">
-                    <option value="" selected>Velg</option>
-                    <option>Bakkeplan</option><option>1. etasje</option><option>2. etasje</option><option>3. etasje</option><option>4. etasje</option><option>5. etasje eller h&oslash;yere</option>
-                  </select></div>
-                </div>
-                <div class="field">
-                  <label for="til_heis">Heis?</label>
-                  <div class="inp sel"><select id="til_heis" name="til_heis">
-                    <option value="" selected>Velg</option>
-                    <option>Ja</option><option>Nei</option>
-                  </select></div>
+                  <label for="from-parking">Avstand til parkering (m) <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="from-parking" name="from_parking" inputmode="numeric" placeholder="F.eks. 10" required></div>
                 </div>
               </div>
               <div class="field">
-                <label>Trenger du ogs&aring;&hellip;</label>
+                <label for="from-floor-access">Etasje og heis <span class="req">*</span></label>
+                <div class="inp sel"><select id="from-floor-access" name="from_floor_access" required>
+                  <option value="" disabled selected>Velg etasje og heis</option>
+                  <option>1. etasje / bakkeplan</option><option>2.-3. etasje, med heis</option><option>2.-3. etasje, uten heis</option><option>4. etasje eller h&oslash;yere, med heis</option><option>4. etasje eller h&oslash;yere, uten heis</option>
+                </select></div>
+              </div>
+              <div class="fsub">Om privatflytting</div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="rooms">Antall rom</label>
+                  <div class="inp"><input type="number" id="rooms" name="rooms" min="1" max="30"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Tunge eller spesielle gjenstander</label>
                 <div class="cbox-grid">
-                  <label class="cbox"><input type="checkbox" name="tillegg" value="Pakkehjelp"> Pakkehjelp</label>
-                  <label class="cbox"><input type="checkbox" name="tillegg" value="Flyttevask"> Flyttevask</label>
-                  <label class="cbox"><input type="checkbox" name="tillegg" value="Lagring"> Lagring</label>
-                  <label class="cbox"><input type="checkbox" name="tillegg" value="Bortkj&oslash;ring av avfall"> Bortkj&oslash;ring av avfall</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Piano eller flygel"> Piano eller flygel</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Safe"> Safe</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Akvarium"> Akvarium</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Marmor- eller steinbord"> Marmor- eller steinbord</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Treningsutstyr"> Treningsutstyr</label>
+                  <label class="cbox"><input type="checkbox" name="heavy_items" value="Ingen"> Ingen</label>
                 </div>
+              </div>
+              <div class="field">
+                <label>Trenger du pakkehjelp?</label>
+                <div class="rgrp"><label class="cbox"><input type="radio" name="packing_help" value="Nei, jeg pakker selv"> Nei, jeg pakker selv</label><label class="cbox"><input type="radio" name="packing_help" value="Ja, delvis"> Ja, delvis</label><label class="cbox"><input type="radio" name="packing_help" value="Ja, alt"> Ja, alt</label></div>
+              </div>
+              <div class="field">
+                <label>Skal noe kj&oslash;res bort?</label>
+                <div class="rgrp"><label class="cbox"><input type="radio" name="needs_disposal" value="Nei"> Nei</label><label class="cbox"><input type="radio" name="needs_disposal" value="Ja, litt"> Ja, litt</label><label class="cbox"><input type="radio" name="needs_disposal" value="Ja, mye"> Ja, mye</label></div>
+              </div>
+              <div class="field">
+                <label>&Oslash;nsker du flyttevask i tillegg?</label>
+                <div class="rgrp"><label class="cbox"><input type="radio" name="cleaning_addon" value="Ja"> Ja</label><label class="cbox"><input type="radio" name="cleaning_addon" value="Nei"> Nei</label><label class="cbox"><input type="radio" name="cleaning_addon" value="Vet ikke"> Vet ikke</label></div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="extra_men">Ekstra b&aelig;rehjelp (antall personer)</label>
+                  <div class="inp"><input type="number" id="extra_men" name="extra_men" min="0" max="3"></div>
+                </div>
+              </div>
+              <p class="fhint" style="margin-top:-4px">Standard er 2 flyttere. Legg til flere hvis du vil at jobben skal g&aring; raskere &mdash; utl&oslash;ser et lite tillegg.</p>
+
+            </div>
+
+
+            <!-- STEG 3: Til-adresse (likt raskflytting.no) -->
+            <div class="fstep" data-step="3" data-name="Til-adresse">
+              <div class="field">
+                <label for="to-address">Adresse <span class="req">*</span></label>
+                <div class="inp"><input type="text" id="to-address" name="to_address" placeholder="Gateadresse og husnummer" required></div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="to-postcode">Postnummer <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="to-postcode" name="to_postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="0150" required></div>
+                </div>
+                <div class="field">
+                  <label for="to-city">By/Sted <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="to-city" name="to_city" placeholder="Oslo" required></div>
+                </div>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="to-m2">Hvor mange m&sup2;? <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="to-m2" name="to_m2" inputmode="numeric" placeholder="F.eks. 65" required></div>
+                </div>
+                <div class="field">
+                  <label for="to-housing">Type bolig <span class="req">*</span></label>
+                  <div class="inp sel"><select id="to-housing" name="to_housing" required>
+                    <option value="" disabled selected>Velg boligtype</option>
+                    <option>Leilighet</option><option>Rekkehus</option><option>Enebolig</option><option>Hytte</option><option>Kontor</option>
+                  </select></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="to-fits">Passer alt i 19 m&sup3; flyttebil? <span class="req">*</span></label>
+                <div class="inp sel"><select id="to-fits" name="to_fits" required>
+                  <option value="" disabled selected>Velg svar</option>
+                  <option>Ja</option><option>Nei</option><option>Vet ikke</option>
+                </select></div>
+                <p class="fhint">19 m&sup3; tilsvarer ca. en 2-roms leilighet. Usikker? Velg &laquo;Vet ikke&raquo; &ndash; vi finner riktig st&oslash;rrelse.</p>
+              </div>
+              <div class="fgrid2">
+                <div class="field">
+                  <label for="to-parking">Avstand til parkering (m) <span class="req">*</span></label>
+                  <div class="inp"><input type="text" id="to-parking" name="to_parking" inputmode="numeric" placeholder="F.eks. 10" required></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="to-floor-access">Etasje og heis <span class="req">*</span></label>
+                <div class="inp sel"><select id="to-floor-access" name="to_floor_access" required>
+                  <option value="" disabled selected>Velg etasje og heis</option>
+                  <option>1. etasje / bakkeplan</option><option>2.-3. etasje, med heis</option><option>2.-3. etasje, uten heis</option><option>4. etasje eller h&oslash;yere, med heis</option><option>4. etasje eller h&oslash;yere, uten heis</option>
+                </select></div>
               </div>
             </div>
 
-            <!-- STEG 4: melding + samtykke -->
-            <div class="fstep" data-step="4">
+            <!-- STEG 4: Send (likt raskflytting.no) -->
+            <div class="fstep" data-step="4" data-name="Send">
               <div class="field">
-                <label for="melding">Hva skal flyttes? <span style="font-weight:500;color:var(--muted)">(valgfritt)</span></label>
-                <div class="inp"><textarea id="melding" name="melding" rows="3" placeholder="F.eks. tunge m&oslash;bler, piano, antall esker, parkering ved oppgangen"></textarea></div>
+                <label for="message">Melding til oss <span style="font-weight:500;color:var(--muted)">(valgfritt)</span></label>
+                <div class="inp"><textarea id="message" name="message" rows="4" placeholder="Detaljert beskrivelse av godsets omfang &ndash; f.eks. piano, tunge m&oslash;bler, demontering eller spesielle &oslash;nsker. Hjelper oss &aring; avklare om vi trenger mer enn 1 flyttebil."></textarea></div>
+                <p class="fhint">Jo mer informasjon du gir oss, jo mer presist tilbud kan vi sende deg.</p>
               </div>
-              <label class="gdpr"><input type="checkbox" name="gdpr" value="Ja"> Jeg vil motta e-post om tilbud og nyheter fra Rask Flytting. (Du kan melde deg av n&aring;r som helst)</label>
+              <label class="gdpr"><input type="checkbox" id="consent" name="consent" value="Ja" required> Jeg samtykker til at Rask Flytting behandler mine personopplysninger for &aring; gi meg et tilbud. Vi deler aldri informasjonen din med tredjepart, og du kan n&aring;r som helst be om at opplysningene slettes.</label>
+              <label class="gdpr"><input type="checkbox" name="marketing_consent" value="Ja"> Jeg &oslash;nsker &aring; motta e-post om tilbud og nyheter fra Rask Flytting. Du kan n&aring;r som helst melde deg av. (Valgfritt)</label>
             </div>
 
             <input type="hidden" name="interest" value="Flytting — raskflytting.arcads.no">
             <div class="fnav">
               <button type="button" class="btn-soft" id="fPrev" style="display:none">Forrige</button>
-              <button type="button" class="cta" id="fNext"><span class="t">Neste<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
-              <button type="submit" class="cta" id="fSubmit" style="display:none"><span class="t">F&aring; fastpris<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></button>
+              <button type="button" class="cta" id="fNext"><span class="t">Neste steg<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
+              <button type="submit" class="cta" id="fSubmit" style="display:none"><span class="t">Send foresp&oslash;rsel<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></button>
             </div>
           </form>
           <div class="fine">
@@ -693,7 +779,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
         <span class="eyebrow">Oslo-basert flyttebyr&aring;</span>
         <h2 class="h-lg" style="margin:12px 0 12px">Vi flytter i hele Oslo &mdash; og resten av landet</h2>
         <p class="lede">Husstander, kontorer og d&oslash;dsbo siden 2014. Oslo og omegn, Bergen, Trondheim, Stavanger og Kristiansand &mdash; samt langflytting mellom byene.</p>
-        <p style="font-size:0.92rem;color:var(--muted);margin-top:12px">Sp&oslash;rsm&aring;l? Ring oss p&aring; <a href="tel:+4722448440" style="color:var(--clay-deep);font-weight:600">22 44 84 40</a> (man&ndash;fre 09&ndash;16) eller skriv til <a href="mailto:kundeservice@raskflytting.no" style="color:var(--clay-deep);font-weight:600">kundeservice@raskflytting.no</a></p>
+        <p style="font-size:0.92rem;color:var(--muted);margin-top:12px">Sp&oslash;rsm&aring;l? Skriv til <a href="mailto:kundeservice@raskflytting.no" style="color:var(--clay-deep);font-weight:600">kundeservice@raskflytting.no</a></p>
         <div style="margin-top:24px"><a href="#top" class="cta jump"><span class="t">F&aring; fastpris p&aring; flyttingen<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a></div>
       </div>
       <div class="locard reveal">
@@ -703,7 +789,6 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
           <div class="ad">Rask Flytting AS &middot; Oslo<small>Man&ndash;fre 09&ndash;16 &middot; l&oslash;rdag: e-post &middot; s&oslash;ndag stengt</small></div>
         </div>
         <div class="foot">
-          <a href="tel:+4722448440" class="btn-soft">Ring 22 44 84 40</a>
           <a href="https://raskflytting.no" target="_blank" rel="noopener" class="btn-soft" style="background:var(--clay);color:#fff;border-color:var(--clay)">Bes&oslash;k raskflytting.no <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
@@ -715,7 +800,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 <footer class="footer">
   <div class="wrap">
     <div style="display:inline-block;background:#fff;border-radius:14px;padding:10px 18px;margin-bottom:14px"><img src="img/logo.png" alt="Rask Flytting" style="height:34px;margin:0"></div>
-    <div class="reg">&copy; 2026 Rask Flytting AS &middot; del av GB Transport AS &middot; org.nr. 835 095 002<br>Oslo &middot; kundeservice@raskflytting.no &middot; 22 44 84 40<br>Fast pris &middot; Forsikret opp til 1&nbsp;mill.&nbsp;kr &middot; Forn&oslash;yd-garanti</div>
+    <div class="reg">&copy; 2026 Rask Flytting AS &middot; del av GB Transport AS &middot; org.nr. 835 095 002<br>Oslo &middot; kundeservice@raskflytting.no<br>Fast pris &middot; Forsikret opp til 1&nbsp;mill.&nbsp;kr &middot; Forn&oslash;yd-garanti</div>
   </div>
 </footer>
 
@@ -798,7 +883,8 @@ function showStep(n){
   for(var i=0;i<steps.length;i++)steps[i].classList.toggle('on',i===curStep-1);
   var bars=document.querySelectorAll('#fsteps b');
   for(var k=0;k<bars.length;k++)bars[k].classList.toggle('on',k<curStep);
-  var t=document.getElementById('fstepTxt');if(t)t.textContent='Steg '+curStep+' av '+maxStep;
+  var n=document.getElementById('fstepN');if(n)n.textContent=curStep;
+  var nm=document.getElementById('fstepName');if(nm)nm.textContent=steps[curStep-1].getAttribute('data-name')||'';
   document.getElementById('fPrev').style.display=curStep>1?'':'none';
   document.getElementById('fNext').style.display=curStep<maxStep?'':'none';
   document.getElementById('fSubmit').style.display=curStep===maxStep?'':'none';
@@ -808,15 +894,19 @@ function validStep(){
   for(var i=0;i<fields.length;i++){if(!fields[i].checkValidity()){fields[i].reportValidity();return false;}}
   return true;
 }
+function goStep(n){showStep(n);var fc=document.querySelector('.formcard');if(fc){var y=fc.getBoundingClientRect().top+window.pageYOffset-20;if(fc.getBoundingClientRect().top<0)scrollToY(Math.max(0,y),350);}
+}
 if(leadForm){
-  document.getElementById('fNext').addEventListener('click',function(){if(validStep())showStep(curStep+1);});
-  document.getElementById('fPrev').addEventListener('click',function(){showStep(curStep-1);});
+  document.getElementById('fNext').addEventListener('click',function(){if(validStep())goStep(curStep+1);});
+  document.getElementById('fPrev').addEventListener('click',function(){goStep(curStep-1);});
 }
 function submitLead(form,msgEl){
   if(!validStep())return;
+  if(form.website&&form.website.value)return; /* honeypot (som raskflytting.no) */
   var p={},fd=new FormData(form);
   fd.forEach(function(v,k){if(v!=='')p[k]=p[k]?p[k]+', '+v:v;});
   p.name=((p.first_name||'')+' '+(p.last_name||'')).trim();
+  delete p.website;
   p.subject='Nytt flytte-lead — raskflytting.arcads.no';
   p.lead_source=LEAD_SOURCE;
   p.page_url=location.href;
@@ -835,7 +925,7 @@ flushStoredLeads();
 var overlay=document.getElementById('popup');
 if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('rf_popup_done')||sessionStorage.getItem('rf_lead_done');}catch(e){return false;}};
-  var openPopup=function(){if(popupSeen())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
+  var openPopup=function(){if(popupSeen())return;if(window.lpPopupBlocked){if(window.lpPopupBlocked()){if(!window.lpFormTouched)setTimeout(openPopup,5000);return;}}overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
   var closePopup=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('rf_popup_done','1');}catch(e){}};
   setTimeout(openPopup,15000);
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
@@ -853,6 +943,57 @@ if(overlay){
 
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hva koster en flytting i Oslo?", "acceptedAnswer": {"@type": "Answer", "text": "Veiledende: hybel/1-roms fra 3 900 kr, 2-roms fra 5 900 kr, 3-roms fra 7 900 kr og 4-roms/rekkehus fra 11 900 kr. Enebolig prises etter gratis befaring. Du får alltid skriftlig fastpris før flyttedagen."}}, {"@type": "Question", "name": "Hva er inkludert i prisen?", "acceptedAnswer": {"@type": "Answer", "text": "Bil, drivstoff, bompenger, bæreutstyr som traller og bæreseler, uniformerte ansatte, og ansvarsforsikring opp til 1 million kroner gjennom Tryg. Pakkemateriell, lagring og flyttevask har egen fastpris."}}, {"@type": "Question", "name": "Er flyttingen forsikret?", "acceptedAnswer": {"@type": "Answer", "text": "Ja — ansvarsforsikring opp til 1 million kroner gjennom Tryg Forsikring, som dekker både innbo og bygningsskader."}}, {"@type": "Question", "name": "Ordner dere parkeringstillatelse?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Vi søker hos Bymiljøetaten tre virkedager før, dekker gebyret og setter opp skiltene."}}, {"@type": "Question", "name": "Hvilke områder dekker dere?", "acceptedAnswer": {"@type": "Answer", "text": "Oslo og omegn — inkludert Bærum, Asker, Lillestrøm og Drammen — samt Bergen, Trondheim, Stavanger og Kristiansand, og langflytting mellom byene."}}]}
+</script>
+<!-- ===== SKJEMA-MINNE + POPUP-SPERRE (18.09.2026) =====
+     1) Alt brukeren fyller inn (felter + pills) lagres i sessionStorage og fylles inn igjen ved reload og i popup-skjemaet.
+     2) Popupen («Før du går») åpnes ALDRI mens skjemaet er på skjermen eller brukeren har begynt å fylle det ut.
+     NB: ingen og-tegn (ampersand) i denne blokka (WordPress entitet-konverterer dem). -->
+<script>
+(function(){
+  var KEY='rf_form_v1',TKEY='rf_form_touched';
+  var forms=[].slice.call(document.querySelectorAll('form#leadForm,form#leadFormModal'));
+  if(!forms.length)return;
+  var hero=document.getElementById('leadForm')||forms[0];
+  function load(){try{return JSON.parse(sessionStorage.getItem(KEY)||'{}');}catch(e){return {};}}
+  function save(o){try{sessionStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
+  function touch(){window.lpFormTouched=true;try{sessionStorage.setItem(TKEY,'1');}catch(e){}}
+  try{if(sessionStorage.getItem(TKEY))window.lpFormTouched=true;}catch(e){}
+  function skip(el){if(el.type==='hidden')return true;if(el.type==='submit')return true;if(el.name==='website')return true;if(el.closest('.hp'))return true;return false;}
+  /* --- lagre --- */
+  function collect(f){var o=load();
+    [].forEach.call(f.querySelectorAll('input[name],select[name],textarea[name]'),function(el){
+      if(skip(el))return;
+      if(el.type==='checkbox'||el.type==='radio'){if(el.checked)o[el.name]=el.value;return;}
+      if(el.value)o[el.name]=el.value;});
+    [].forEach.call(f.querySelectorAll('.qual[data-key]'),function(g){var on=g.querySelector('.opt.on');if(on)o[g.getAttribute('data-key')]=on.textContent;});
+    save(o);return o;}
+  /* --- fyll inn tekstfelt (aldri overskriv noe brukeren har skrevet) --- */
+  function fillText(f,o){[].forEach.call(f.querySelectorAll('input[name],select[name],textarea[name]'),function(el){
+    if(skip(el))return;var v=o[el.name];if(v==null)return;
+    if(el.type==='checkbox'||el.type==='radio'){el.checked=(el.value===v);return;}
+    if(!el.value)el.value=v;});}
+  /* --- fyll inn pills sekvensielt via klikk, så sidens egen wizard-logikk kjører --- */
+  function fillPills(f,o){var groups=[].slice.call(f.querySelectorAll('.qual[data-key]')),i=0;
+    (function next(){if(i>=groups.length)return;var g=groups[i++],v=o[g.getAttribute('data-key')];
+      if(v){if(!g.querySelector('.opt.on')){var hit=null;[].forEach.call(g.querySelectorAll('.opt'),function(b){if(!hit){if(b.textContent===v)hit=b;}});
+        if(hit){hit.click();setTimeout(next,320);return;}}}
+      next();})();}
+  var saved=load();
+  forms.forEach(function(f){
+    fillText(f,saved);
+    f.addEventListener('input',function(){collect(f);touch();forms.forEach(function(g){if(g!==f)fillText(g,load());});});
+    f.addEventListener('change',function(){collect(f);touch();});
+    f.addEventListener('focusin',touch);
+    f.addEventListener('click',function(e){if(e.target.closest('.opt,button,input,select,textarea,label'))touch();if(e.target.closest('.opt'))setTimeout(function(){collect(f);},0);});
+  });
+  fillPills(hero,saved);
+  /* --- popup-sperre: aldri når skjemaet er berørt eller synlig (popup-koden spør window.lpPopupBlocked) --- */
+  function formVisible(){var r=hero.getBoundingClientRect();if(r.bottom<=0)return false;if(r.top>=window.innerHeight)return false;return true;}
+  window.lpPopupBlocked=function(){if(window.lpFormTouched)return true;return formVisible();};
+  /* --- speil hovedskjemaets verdier inn i popup-skjemaet i det popupen åpnes --- */
+  var ov=document.getElementById('popup');
+  if(ov){if(window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show')){var o=load();forms.forEach(function(g){if(g!==hero){fillText(g,o);fillPills(g,o);}});}}).observe(ov,{attributes:true,attributeFilter:['class']});}}
+})();
 </script>
 </body>
 </html>
